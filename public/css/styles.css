@@ -4,9 +4,38 @@
   box-sizing: border-box;
 }
 
+/* //////////////////////////////////////////// */
+.amarillo {
+  background-color: #eac926;
+}
+.azul {
+  color: #03264c;
+}
+.celeste {
+  color: #1259c3;
+}
+.grisOscuro {
+  color: #666;
+}
+.grisClaro {
+  color: #ebebeb;
+}
+.verde {
+  color: #39b54a;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ebebeb;
+}
+
+.negrilla {
+  font-weight: bold;
+  font-size: 2vw;
+  text-align: start;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  align-content: center;
 }
 
 h3 {
@@ -16,27 +45,50 @@ h3 {
 p {
   font-size: 12px;
 }
+
 div.top-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 5%;
+}
+
+header div.top-header p {
+  display: flex;
+  text-align: center;
+  margin-top: 10px;
+  align-items: center;
 }
 
 header {
   background-color: #eac926;
 }
 
-header div.logo {
-  width: 50%;
+header div.logo,
+header .form {
+  width: 30%;
+}
+.barraBusqueda {
+  border: 0.2px solid white;
+  border-radius: 15px;
+  height: 5vh;
+  width: 100%;
 }
 
-header div.logo {
-  padding: 10px;
+header .form {
+  display: flex;
+  align-items: center;
+  padding: 2px;
 }
 header nav {
   font-size: 12px;
+  margin-left: 20px;
+  display: none;
 }
 
 header ul li {
   list-style-type: none;
+  font-size: 1.5vw;
 }
 
 header ul li a {
@@ -50,32 +102,40 @@ header .form .input {
   outline: none;
   color: #666;
   padding: 2px;
+  font-size: 1.5vw;
 }
+
 header .form .submit {
   background-color: #fff;
   border: 1px solid #000;
   color: #666;
   width: 10%;
 }
+.filaLista {
+  display: NONE;
+}
+.filaLista1 {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 4;
+}
 
-header div.top-header p {
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
+.filaLista2 {
+  display: flex;
+  justify-content: space-around;
+  justify-items: flex-end;
+  flex-grow: 4;
 }
-nav {
-  display: none;
+.filaLista3 {
+  flex-grow: 4;
 }
 
-.burger-menu {
-  display: block;
-}
 div.burger-menu {
   text-align: center;
 }
 
 div.burger-menu i {
-  background-color: #0044aa;
+  background-color: #03264c;
   border-radius: 5px;
   color: #fff;
   font-size: 20px;
@@ -85,35 +145,21 @@ div.burger-menu i {
   width: 40px;
 }
 
-article div.main-article {
-  width: 100%;
-}
-
-.top-header {
+div.last-visit,
+div.offers {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.form {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.form input {
-  height: 20px;
+  flex-wrap: wrap;
 }
 
 .price {
   font-size: 18px;
+  width: 30%;
 }
-.products {
-  display: flex;
-  flex-wrap: wrap;
+
+.discount {
+  width: 70%;
 }
+
 .discount,
 .description {
   font-size: 16px;
@@ -125,46 +171,32 @@ h3,
   color: #666;
 }
 
+.description {
+  display: none;
+  margin-top: 20px;
+}
+
 section.banner img {
   width: 100%;
 }
 
 main {
-  width: 100%;
-  padding: 0 5%;
-  text-align: center;
-}
-
-.main-article {
-  border-top: 1px solid #ebebeb;
-  padding: 15px;
-  text-align: start;
-}
-
-.price-discount {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.price {
-  width: 30%;
-}
-.discount {
-  width: 70%;
-}
-.description {
-  margin: 20px 0;
-  display: none;
+  width: 90%;
+  margin: 0 auto;
 }
 
 main section article {
   background-color: #fff;
-  margin: 10px;
-  position: relative;
+  margin: 10px 0px;
 }
 
 main section article img {
   width: 100%;
+}
+
+main section article i,
+.discount {
+  color: #39b54a;
 }
 
 main section article i {
@@ -178,33 +210,156 @@ main section article i {
   border-radius: 50%;
   position: absolute;
   right: 20px;
+  top: -15px;
+  transition: 1s;
 }
 
-main section article i,
-.discount {
-  color: #39b54a;
+main section h3 {
+  margin: 20px 0px;
 }
 
+article div.main-article {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  border-top: 1px solid #ebebeb;
+  position: relative;
+  padding: 15px;
+}
+.barraInput {
+  font-size: 1rem;
+  color: gray;
+  padding: 15px;
+  border-radius: 5px;
+  border: white solid 0.2px;
+  margin-top: 5vh;
+}
+
+/* /////////////////////////////////////////////// */
+/* FOOTEER //////////////////////////////////////////// */
+
+footer {
+  text-align: center;
+  background-color: white;
+  color: #666;
+}
+
+footer section i {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+footer section {
+  margin: 20px;
+}
+
+body header nav {
+  display: none;
+}
+.textoHeader {
+  font-size: 1.3vw;
+}
+
+.formulario {
+  background-color: #ebebeb;
+  border: blue solid 3px;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+.fechaDeN {
+  display: flex;
+  margin: auto;
+  font-weight: bold;
+  font-size: 2vw;
+  text-align: start;
+  justify-content: start;
+  padding-top: 40px;
+}
+.textoPequeno {
+  font-size: 1.8vw;
+  text-align: start;
+}
+.enviarLogin {
+  background-color: blue;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+
+  height: 40px;
+  margin: 10px 0px 20px 0px;
+  padding: 10px;
+  width: 40vw;
+}
+.listaCheq {
+  display: block;
+  text-align: start;
+}
 @media (min-width: 361px) {
-  article {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }
-  .burger-menu {
+  main section article .description {
     display: none;
   }
-  .description {
-    display: block;
+  .filaLista {
+    display: flex;
   }
-  nav {
-    display: block;
+  div.burger-menu {
+    display: none;
   }
-  .products {
-    flex-wrap: nowrap;
+
+  main section article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  main section div.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  main section div.products article {
+    width: 45%;
+  }
+
+  .price,
+  .discount {
+    width: 50%;
   }
 }
 
 @media (min-width: 769px) {
-  .products {
-    flex-wrap: nowrap;
+  main section div.products article {
+    width: 22%;
   }
+  footer div {
+    display: flex;
+  }
+}
+
+main section article:hover .description {
+  display: block;
+  transition: 1s;
+}
+
+.fa-truck:hover {
+  transform: rotateZ(360deg);
+}
+
+main section article:hover {
+  box-shadow: 0px 0px 20px rgb(100, 100, 100);
+  transition: 1s;
+}
+
+.boton-enviar:hover {
+  background-color: #0022aa;
+}
+
+.celeste:hover {
+  color: #3f8cf1;
+  animation-duration: infinite;
 }
